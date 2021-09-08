@@ -1,0 +1,34 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Sr. No</th>
+        <th scope="col">Course Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of courses">
+        <th scope="row">{{ course.id }}</th>
+        <td>
+            <a class="nav-link" [routerLink]="['course-details', course.id, {name: course.name}]" [queryParams]="{description: course.description}">{{ course.name }}</a>
+        </td>
+      </tr>
+      <!-- <tr>
+        <th scope="row">2</th>
+        <td>
+            <a class="nav-link" [routerLink]="['course-details', 2]">Azure</a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>
+            <a class="nav-link" [routerLink]="['course-details', 3]">Angular</a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>
+            <a class="nav-link" [routerLink]="['course-details', 4]">Micro Services</a>
+        </td>
+      </tr> -->
+    </tbody>
+  </table>

@@ -1,0 +1,47 @@
+<p>pipes works!</p>
+
+<!-- <div>
+    {{ employeeList }}
+</div> -->
+
+<!-- <div>
+    {{ employeeList | json }}
+</div> -->
+
+<!-- <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Joining</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employeeList">
+        <th scope="row">{{ emp.name }}</th>
+        <td>{{ emp.address }}</td>
+        <td>{{ emp.salary }}</td>
+        <td>{{ emp.joining }}</td>
+      </tr>
+    </tbody>
+  </table> -->
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Joining</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employeeList">
+        <th scope="row">{{ emp.name | uppercase}}</th>
+        <td>{{ emp.address | lowercase | reverse}}</td>
+        <td>{{ emp.salary | currency:'INR' }}</td>
+        <td>{{ emp.joining |date:'dd/MM/YYYY' }}</td>
+      </tr>
+    </tbody>
+  </table>
